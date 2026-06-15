@@ -3,6 +3,7 @@ import LiveEditor from "./LiveEditor";
 
 const whatsappLink =
   "https://wa.me/5500000000000?text=Ol%C3%A1%2C%20quero%20avaliar%20um%20projeto%20de%20eletroposto%20com%20a%20Renovera.";
+const logoSrc = `${import.meta.env.BASE_URL}logo-renovera.png`;
 
 function WhatsAppIcon() {
   return (
@@ -72,7 +73,7 @@ function App() {
       <header className="header">
         <div className="container headerInner">
           <a href="#inicio" className="brand">
-            <img src="/logo-renovera.png" alt="Renovera" />
+            <img src={logoSrc} alt="Renovera" />
           </a>
 
           <nav className="nav">
@@ -530,7 +531,7 @@ function App() {
       <footer className="footer">
         <div className="container footerGrid">
           <div>
-            <img src="/logo-renovera.png" alt="Renovera" />
+            <img src={logoSrc} alt="Renovera" />
             <p>
               Engenharia, energia e mobilidade elétrica para estruturar a nova
               infraestrutura de recarga no Brasil.
