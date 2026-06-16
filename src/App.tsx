@@ -1,7 +1,18 @@
 import { useMemo, useState } from "react";
 import LiveEditor from "./LiveEditor";
 
-const whatsappLink = "https://wa.me/5519996514827?text=Ol%C3%A1%2C%20Renovera.%20Gostaria%20de%20avaliar%20a%20viabilidade%20de%20instalar%20um%20eletroposto.%20Meu%20local%20%C3%A9%20%5Bhotel%20%2F%20posto%20%2F%20empresa%20%2F%20condom%C3%ADnio%20%2F%20estacionamento%20%2F%20outro%5D.";
+const WHATSAPP_NUMBER = "5519996514827";
+const buildWhatsappUrl = (message: string) =>
+  `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+const whatsappLink = buildWhatsappUrl(
+  "Olá, Renovera. Gostaria de avaliar a viabilidade de instalar um eletroposto. Meu local é [hotel / posto / empresa / condomínio / estacionamento / outro]."
+);
+const calculatorWhatsappLink = buildWhatsappUrl(
+  "Olá, Renovera. Usei a calculadora de eletroposto e gostaria de transformar a simulação em um estudo real de viabilidade. Posso enviar os dados do meu projeto?"
+);
+const universalWhatsappLink = buildWhatsappUrl(
+  "Olá, Renovera. Gostaria de receber uma análise técnica pelo WhatsApp."
+);
 const logoSrc = `${import.meta.env.BASE_URL}logo-renovera.png`;
 
 function WhatsAppIcon() {
@@ -83,7 +94,7 @@ function App() {
             <a href="#duvidas">Dúvidas</a>
           </nav>
 
-          <a className="headerButton" href={whatsappLink} target="_blank">
+          <a className="headerButton" href={whatsappLink} target="_blank" rel="noreferrer">
             Solicitar estudo
           </a>
         </div>
@@ -108,7 +119,7 @@ function App() {
                 <a className="primaryButton" href="#roi">
                   Simular retorno financeiro
                 </a>
-                <a className="secondaryButton" href={whatsappLink} target="_blank">
+                <a className="secondaryButton" href={whatsappLink} target="_blank" rel="noreferrer">
                   Falar com a Renovera
                 </a>
               </div>
@@ -302,6 +313,10 @@ function App() {
                     {formatCurrency(result.annualNetRevenue)}.
                   </p>
                 </div>
+
+                <a className="primaryButton calculatorWhatsappButton" href={calculatorWhatsappLink} target="_blank" rel="noreferrer">
+                  Receber análise do eletroposto no WhatsApp
+                </a>
               </div>
             </div>
           </div>
@@ -520,9 +535,14 @@ function App() {
               dimensionar a infraestrutura e indicar a melhor estratégia para o
               seu eletroposto.
             </p>
-            <a className="primaryButton" href={whatsappLink} target="_blank">
-              Solicitar análise do projeto
-            </a>
+            <div className="finalActions">
+              <a className="primaryButton" href={calculatorWhatsappLink} target="_blank" rel="noreferrer">
+                Transformar simulação em estudo real
+              </a>
+              <a className="secondaryButton finalSecondaryButton" href={universalWhatsappLink} target="_blank" rel="noreferrer">
+                Falar com especialista
+              </a>
+            </div>
           </div>
         </section>
       </main>
@@ -537,31 +557,29 @@ function App() {
             </p>
           </div>
 
-          <div>
-            <h4>Menu</h4>
-            <a href="#roi">Simulação</a>
-            <a href="#solucao">Solução</a>
-            <a href="#aplicacoes">Aplicações</a>
-            <a href="#potencias">Potências</a>
+          <div className="footerGridThree">
+            <div className="footerPanel">
+              <h4><span className="footerIcon">01</span>ENDEREÇO</h4>
+              <p>Rua Visconde do Rio Branco, n.106, Centro, São João da Boa Vista - SP, CEP: 13870-180</p>
+            </div>
+            <div className="footerPanel">
+              <h4><span className="footerIcon">02</span>TELEFONES</h4>
+              <a href="https://wa.me/5519996514827" target="_blank" rel="noreferrer">+55 (19) 99651-4827</a>
+              <a href="tel:+551931950160">+55 (19) 3195-0160</a>
+            </div>
+            <div className="footerPanel">
+              <h4><span className="footerIcon">03</span>E-MAIL</h4>
+              <a href="mailto:contato@renovera.com.br">contato@renovera.com.br</a>
+              <p>Viabilidade, infraestrutura, projeto elétrico e implantação de eletropostos.</p>
+            </div>
           </div>
+        </div>
 
-          <div>
-            <h4>Contato</h4>
-            <a href={whatsappLink} target="_blank">
-              WhatsApp comercial
-            </a>
-            <a href="mailto:contato@renovera.com.br">contato@renovera.com.br</a>
-          </div>
-
-          <div>
-            <h4>Compliance</h4>
-            <p>
-              Canal ético e confidencial para denúncias e comunicações internas.
-            </p>
-            <a href="mailto:compliance@renovera.com.br">
-              compliance@renovera.com.br
-            </a>
-          </div>
+        <div className="container ecosystemLinks">
+          <a href="https://renovera1.github.io/renovera-consultoria-regulatoria/" target="_blank" rel="noreferrer">Consultoria Regulatória</a>
+          <a href="https://renovera1.github.io/renovera-projetos-eletricos/" target="_blank" rel="noreferrer">Projetos Elétricos</a>
+          <a href="https://renovera1.github.io/renovera-energia-solar/" target="_blank" rel="noreferrer">Energia Solar</a>
+          <a href="https://renovera1.github.io/renovera-eletroposto/" target="_blank" rel="noreferrer">Eletropostos</a>
         </div>
 
         <div className="container copyright">
@@ -569,7 +587,7 @@ function App() {
         </div>
       </footer>
 
-      <a className="whatsappFloat" href={whatsappLink} target="_blank" rel="noreferrer" aria-label="Falar com a Renovera no WhatsApp">
+      <a className="whatsappFloat" href={universalWhatsappLink} target="_blank" rel="noreferrer" aria-label="Receber análise pelo WhatsApp">
         <WhatsAppIcon />
       </a>
       <LiveEditor namespace="renovera-eletroposto" />

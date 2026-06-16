@@ -670,7 +670,7 @@ input {
 }
 
 .finalCta {
-  padding-top: 34px;
+  padding: 48px 0 24px;
 }
 
 .finalCtaBox {
@@ -678,15 +678,23 @@ input {
   padding: 56px;
   border-radius: var(--radius-xl);
   background:
-    radial-gradient(circle at 85% 10%, rgba(217, 173, 39, 0.25), transparent 34%),
-    linear-gradient(135deg, #ffffff, #edf5ef);
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow);
+    radial-gradient(circle at 85% 10%, rgba(252, 201, 73, 0.22), transparent 34%),
+    linear-gradient(135deg, #004b2f 0%, #0f5f43 50%, #7a9a66 100%);
+  border: 1px solid rgba(255,255,255,0.16);
+  box-shadow: var(--shadow-strong);
 }
 
+.finalCtaBox h2 { color: var(--white); }
 .finalCtaBox p {
   max-width: 760px;
   margin: 0 auto 24px;
+  color: rgba(255,255,255,0.88);
+}
+
+.calculatorWhatsappButton {
+  width: 100%;
+  justify-content: center;
+  margin-top: 10px;
 }
 
 .footer {
