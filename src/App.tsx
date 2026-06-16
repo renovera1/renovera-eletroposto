@@ -5,13 +5,13 @@ const WHATSAPP_NUMBER = "5519996514827";
 const buildWhatsappUrl = (message: string) =>
   `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 const whatsappLink = buildWhatsappUrl(
-  "Olá, Renovera. Gostaria de avaliar a viabilidade de instalar um eletroposto. Meu local é [hotel / posto / empresa / condomínio / estacionamento / outro]."
+  "OlÃƒÂ¡, Renovera. Gostaria de avaliar a viabilidade de instalar um eletroposto. Meu local ÃƒÂ© [hotel / posto / empresa / condomÃƒÂ­nio / estacionamento / outro]."
 );
 const calculatorWhatsappLink = buildWhatsappUrl(
-  "Olá, Renovera. Usei a calculadora de eletroposto e gostaria de transformar a simulação em um estudo real de viabilidade. Posso enviar os dados do meu projeto?"
+  "OlÃƒÂ¡, Renovera. Usei a calculadora de eletroposto e gostaria de transformar a simulaÃƒÂ§ÃƒÂ£o em um estudo real de viabilidade. Posso enviar os dados do meu projeto?"
 );
 const universalWhatsappLink = buildWhatsappUrl(
-  "Olá, Renovera. Gostaria de receber uma análise técnica pelo WhatsApp."
+  "OlÃƒÂ¡, Renovera. Gostaria de receber uma anÃƒÂ¡lise tÃƒÂ©cnica pelo WhatsApp."
 );
 const logoSrc = `${import.meta.env.BASE_URL}logo-renovera.png`;
 
@@ -87,11 +87,11 @@ function App() {
           </a>
 
           <nav className="nav">
-            <a href="#roi">Simulação</a>
-            <a href="#solucao">Solução</a>
-            <a href="#aplicacoes">Aplicações</a>
-            <a href="#potencias">Potências</a>
-            <a href="#duvidas">Dúvidas</a>
+            <a href="#roi">SimulaÃƒÂ§ÃƒÂ£o</a>
+            <a href="#solucao">SoluÃƒÂ§ÃƒÂ£o</a>
+            <a href="#aplicacoes">AplicaÃƒÂ§ÃƒÂµes</a>
+            <a href="#potencias">PotÃƒÂªncias</a>
+            <a href="#duvidas">DÃƒÂºvidas</a>
           </nav>
 
           <a className="headerButton" href={whatsappLink} target="_blank" rel="noreferrer">
@@ -109,10 +109,10 @@ function App() {
               <h1>Estruture seu eletroposto com a Renovera.</h1>
 
               <p>
-                A Renovera desenvolve estudos técnicos e comerciais para
-                implantação de infraestrutura de recarga elétrica em rodovias,
-                postos de combustíveis, hotéis, resorts, condomínios, empresas,
-                shoppings e pontos estratégicos de alta circulação.
+                A Renovera desenvolve estudos tÃƒÂ©cnicos e comerciais para
+                implantaÃƒÂ§ÃƒÂ£o de infraestrutura de recarga elÃƒÂ©trica em rodovias,
+                postos de combustÃƒÂ­veis, hotÃƒÂ©is, resorts, condomÃƒÂ­nios, empresas,
+                shoppings e pontos estratÃƒÂ©gicos de alta circulaÃƒÂ§ÃƒÂ£o.
               </p>
 
               <div className="heroActions">
@@ -135,7 +135,7 @@ function App() {
                 </div>
                 <div>
                   <strong>Projeto completo</strong>
-                  <span>viabilidade, elétrica e implantação</span>
+                  <span>viabilidade, elÃƒÂ©trica e implantaÃƒÂ§ÃƒÂ£o</span>
                 </div>
               </div>
             </div>
@@ -151,7 +151,7 @@ function App() {
                   <span>Receita estimada mensal</span>
                   <strong>R$ 30.375</strong>
                   <p>
-                    Base: 5 recargas por dia, 2 carregadores e ticket médio de
+                    Base: 5 recargas por dia, 2 carregadores e ticket mÃƒÂ©dio de
                     45 kWh.
                   </p>
                 </div>
@@ -166,7 +166,7 @@ function App() {
                     <strong>AC 22 kW</strong>
                   </div>
                   <div>
-                    <span>Posto de combustível</span>
+                    <span>Posto de combustÃƒÂ­vel</span>
                     <strong>DC 60 kW</strong>
                   </div>
                 </div>
@@ -195,10 +195,10 @@ function App() {
               <span className="eyebrow light">Calculadora ROI</span>
               <h2>Simule receita, custos, margem e payback do eletroposto.</h2>
               <p>
-                Esta simulação é preliminar e serve para apoiar a tomada de
-                decisão. O estudo real deve considerar demanda contratada, tarifa
-                local, obras elétricas, equipamento, manutenção, plataforma,
-                tributos e estratégia comercial.
+                Esta simulaÃƒÂ§ÃƒÂ£o ÃƒÂ© preliminar e serve para apoiar a tomada de
+                decisÃƒÂ£o. O estudo real deve considerar demanda contratada, tarifa
+                local, obras elÃƒÂ©tricas, equipamento, manutenÃƒÂ§ÃƒÂ£o, plataforma,
+                tributos e estratÃƒÂ©gia comercial.
               </p>
             </div>
 
@@ -225,7 +225,7 @@ function App() {
                 />
 
                 <Control
-                  label="Energia média por recarga"
+                  label="Energia mÃƒÂ©dia por recarga"
                   value={averageKwh}
                   suffix="kWh"
                   min={10}
@@ -235,7 +235,7 @@ function App() {
                 />
 
                 <Control
-                  label="Preço cobrado por kWh"
+                  label="PreÃƒÂ§o cobrado por kWh"
                   value={salePrice}
                   suffix="R$/kWh"
                   min={0.8}
@@ -285,14 +285,14 @@ function App() {
                 </div>
 
                 <div className="resultCard">
-                  <span>Operação e plataforma</span>
+                  <span>OperaÃƒÂ§ÃƒÂ£o e plataforma</span>
                   <strong>
                     {formatCurrency(result.platformCost + result.maintenance)}
                   </strong>
                 </div>
 
                 <div className="highlightResult">
-                  <span>Margem líquida estimada</span>
+                  <span>Margem lÃƒÂ­quida estimada</span>
                   <strong>{formatCurrency(result.netRevenue)}</strong>
                   <p>
                     Margem aproximada de{" "}
@@ -309,13 +309,13 @@ function App() {
                       : "Indefinido"}
                   </strong>
                   <p>
-                    Receita líquida anual estimada em{" "}
+                    Receita lÃƒÂ­quida anual estimada em{" "}
                     {formatCurrency(result.annualNetRevenue)}.
                   </p>
                 </div>
 
                 <a className="primaryButton calculatorWhatsappButton" href={calculatorWhatsappLink} target="_blank" rel="noreferrer">
-                  Receber análise do eletroposto no WhatsApp
+                  Receber anÃƒÂ¡lise do eletroposto no WhatsApp
                 </a>
               </div>
             </div>
@@ -325,13 +325,13 @@ function App() {
         <section className="intro" id="solucao">
           <div className="container">
             <div className="sectionHeader center">
-              <span className="eyebrow light">Solução Renovera</span>
-              <h2>Da análise de viabilidade ao eletroposto pronto para operar.</h2>
+              <span className="eyebrow light">SoluÃƒÂ§ÃƒÂ£o Renovera</span>
+              <h2>Da anÃƒÂ¡lise de viabilidade ao eletroposto pronto para operar.</h2>
               <p>
                 O projeto de um eletroposto exige mais do que escolher um
-                carregador. É necessário avaliar demanda disponível, padrão de
-                entrada, conexão elétrica, obra civil, perfil de uso, modelo de
-                cobrança, energia consumida, manutenção e retorno sobre o
+                carregador. Ãƒâ€° necessÃƒÂ¡rio avaliar demanda disponÃƒÂ­vel, padrÃƒÂ£o de
+                entrada, conexÃƒÂ£o elÃƒÂ©trica, obra civil, perfil de uso, modelo de
+                cobranÃƒÂ§a, energia consumida, manutenÃƒÂ§ÃƒÂ£o e retorno sobre o
                 investimento.
               </p>
             </div>
@@ -339,39 +339,39 @@ function App() {
             <div className="introGrid">
               <div className="introCard">
                 <span>01</span>
-                <h3>Estudo técnico e comercial</h3>
+                <h3>Estudo tÃƒÂ©cnico e comercial</h3>
                 <p>
-                  Análise do local, perfil de circulação, tipo de usuário,
-                  potência recomendada, consumo esperado e viabilidade econômica
+                  AnÃƒÂ¡lise do local, perfil de circulaÃƒÂ§ÃƒÂ£o, tipo de usuÃƒÂ¡rio,
+                  potÃƒÂªncia recomendada, consumo esperado e viabilidade econÃƒÂ´mica
                   preliminar.
                 </p>
               </div>
 
               <div className="introCard">
                 <span>02</span>
-                <h3>Projeto elétrico e infraestrutura</h3>
+                <h3>Projeto elÃƒÂ©trico e infraestrutura</h3>
                 <p>
-                  Dimensionamento de cabos, proteções, quadros, eletrodutos,
-                  padrão de entrada, demanda, aterramento e adequações elétricas.
+                  Dimensionamento de cabos, proteÃƒÂ§ÃƒÂµes, quadros, eletrodutos,
+                  padrÃƒÂ£o de entrada, demanda, aterramento e adequaÃƒÂ§ÃƒÂµes elÃƒÂ©tricas.
                 </p>
               </div>
 
               <div className="introCard">
                 <span>03</span>
-                <h3>Implantação e comissionamento</h3>
+                <h3>ImplantaÃƒÂ§ÃƒÂ£o e comissionamento</h3>
                 <p>
-                  Apoio técnico para instalação, testes, parametrização,
-                  liberação operacional, validação de segurança e entrega do
+                  Apoio tÃƒÂ©cnico para instalaÃƒÂ§ÃƒÂ£o, testes, parametrizaÃƒÂ§ÃƒÂ£o,
+                  liberaÃƒÂ§ÃƒÂ£o operacional, validaÃƒÂ§ÃƒÂ£o de seguranÃƒÂ§a e entrega do
                   ponto de recarga.
                 </p>
               </div>
 
               <div className="introCard">
                 <span>04</span>
-                <h3>Manutenção e expansão</h3>
+                <h3>ManutenÃƒÂ§ÃƒÂ£o e expansÃƒÂ£o</h3>
                 <p>
-                  Planejamento para operação contínua, inspeções, suporte
-                  técnico, aumento de potência e expansão gradual da rede.
+                  Planejamento para operaÃƒÂ§ÃƒÂ£o contÃƒÂ­nua, inspeÃƒÂ§ÃƒÂµes, suporte
+                  tÃƒÂ©cnico, aumento de potÃƒÂªncia e expansÃƒÂ£o gradual da rede.
                 </p>
               </div>
             </div>
@@ -382,25 +382,25 @@ function App() {
           <div className="container">
             <div className="splitHeader">
               <div>
-                <span className="eyebrow light">Aplicações</span>
-                <h2>Uma solução para diferentes perfis de uso.</h2>
+                <span className="eyebrow light">AplicaÃƒÂ§ÃƒÂµes</span>
+                <h2>Uma soluÃƒÂ§ÃƒÂ£o para diferentes perfis de uso.</h2>
               </div>
               <p>
-                Cada ponto possui uma estratégia distinta. Locais de permanência
+                Cada ponto possui uma estratÃƒÂ©gia distinta. Locais de permanÃƒÂªncia
                 longa podem utilizar recarga AC. Pontos de passagem, rodovias e
-                postos exigem carregamento DC mais rápido, maior disponibilidade
-                e operação mais estruturada.
+                postos exigem carregamento DC mais rÃƒÂ¡pido, maior disponibilidade
+                e operaÃƒÂ§ÃƒÂ£o mais estruturada.
               </p>
             </div>
 
             <div className="cardsGrid">
               <article className="useCard">
                 <div className="icon">01</div>
-                <h3>Postos de combustíveis</h3>
+                <h3>Postos de combustÃƒÂ­veis</h3>
                 <p>
-                  Transforme o posto em ponto de conveniência para veículos
-                  elétricos, com carregadores DC, sinalização, vaga dedicada e
-                  estratégia de monetização por kWh.
+                  Transforme o posto em ponto de conveniÃƒÂªncia para veÃƒÂ­culos
+                  elÃƒÂ©tricos, com carregadores DC, sinalizaÃƒÂ§ÃƒÂ£o, vaga dedicada e
+                  estratÃƒÂ©gia de monetizaÃƒÂ§ÃƒÂ£o por kWh.
                 </p>
               </article>
 
@@ -408,18 +408,18 @@ function App() {
                 <div className="icon">02</div>
                 <h3>Rodovias e corredores</h3>
                 <p>
-                  Estruture pontos de recarga rápida em rotas estratégicas,
+                  Estruture pontos de recarga rÃƒÂ¡pida em rotas estratÃƒÂ©gicas,
                   reduzindo ansiedade de autonomia e agregando valor ao fluxo de
-                  veículos.
+                  veÃƒÂ­culos.
                 </p>
               </article>
 
               <article className="useCard">
                 <div className="icon">03</div>
-                <h3>Hotéis e resorts</h3>
+                <h3>HotÃƒÂ©is e resorts</h3>
                 <p>
-                  Ofereça recarga como diferencial de experiência, retenção e
-                  conveniência para hóspedes com veículos elétricos.
+                  OfereÃƒÂ§a recarga como diferencial de experiÃƒÂªncia, retenÃƒÂ§ÃƒÂ£o e
+                  conveniÃƒÂªncia para hÃƒÂ³spedes com veÃƒÂ­culos elÃƒÂ©tricos.
                 </p>
               </article>
 
@@ -427,18 +427,18 @@ function App() {
                 <div className="icon">04</div>
                 <h3>Shoppings e centros comerciais</h3>
                 <p>
-                  Aumente permanência, gere nova receita e associe o
-                  empreendimento a inovação, sustentabilidade e mobilidade
-                  elétrica.
+                  Aumente permanÃƒÂªncia, gere nova receita e associe o
+                  empreendimento a inovaÃƒÂ§ÃƒÂ£o, sustentabilidade e mobilidade
+                  elÃƒÂ©trica.
                 </p>
               </article>
 
               <article className="useCard">
                 <div className="icon">05</div>
-                <h3>Condomínios</h3>
+                <h3>CondomÃƒÂ­nios</h3>
                 <p>
-                  Planeje infraestrutura coletiva, medição, rateio, segurança
-                  elétrica e expansão organizada para moradores.
+                  Planeje infraestrutura coletiva, mediÃƒÂ§ÃƒÂ£o, rateio, seguranÃƒÂ§a
+                  elÃƒÂ©trica e expansÃƒÂ£o organizada para moradores.
                 </p>
               </article>
 
@@ -446,8 +446,8 @@ function App() {
                 <div className="icon">06</div>
                 <h3>Empresas e frotas</h3>
                 <p>
-                  Apoie a eletrificação de frotas leves, veículos corporativos,
-                  clientes, colaboradores e operações internas.
+                  Apoie a eletrificaÃƒÂ§ÃƒÂ£o de frotas leves, veÃƒÂ­culos corporativos,
+                  clientes, colaboradores e operaÃƒÂ§ÃƒÂµes internas.
                 </p>
               </article>
             </div>
@@ -457,12 +457,12 @@ function App() {
         <section className="power" id="potencias">
           <div className="container powerGrid">
             <div className="sectionHeader">
-              <span className="eyebrow light">Potências</span>
+              <span className="eyebrow light">PotÃƒÂªncias</span>
               <h2>Do carregador residencial ao hub de alta demanda.</h2>
               <p>
-                A escolha da potência depende do tempo de permanência do usuário,
-                da demanda elétrica disponível, do investimento previsto e do
-                modelo de cobrança. A Renovera avalia o equilíbrio entre custo,
+                A escolha da potÃƒÂªncia depende do tempo de permanÃƒÂªncia do usuÃƒÂ¡rio,
+                da demanda elÃƒÂ©trica disponÃƒÂ­vel, do investimento previsto e do
+                modelo de cobranÃƒÂ§a. A Renovera avalia o equilÃƒÂ­brio entre custo,
                 velocidade de recarga e retorno financeiro.
               </p>
             </div>
@@ -470,19 +470,19 @@ function App() {
             <div className="powerTable">
               <div className="powerRow">
                 <strong>11 kW</strong>
-                <span>Residências, condomínios e empresas com baixa rotatividade.</span>
+                <span>ResidÃƒÂªncias, condomÃƒÂ­nios e empresas com baixa rotatividade.</span>
               </div>
               <div className="powerRow">
                 <strong>22 kW</strong>
-                <span>Hotéis, estacionamentos, resorts e pontos de permanência longa.</span>
+                <span>HotÃƒÂ©is, estacionamentos, resorts e pontos de permanÃƒÂªncia longa.</span>
               </div>
               <div className="powerRow">
                 <strong>30 a 40 kW</strong>
-                <span>Operações de entrada em DC com investimento menor.</span>
+                <span>OperaÃƒÂ§ÃƒÂµes de entrada em DC com investimento menor.</span>
               </div>
               <div className="powerRow">
                 <strong>60 a 90 kW</strong>
-                <span>Postos, comércios e locais com necessidade de giro moderado.</span>
+                <span>Postos, comÃƒÂ©rcios e locais com necessidade de giro moderado.</span>
               </div>
               <div className="powerRow">
                 <strong>120 kW</strong>
@@ -490,7 +490,7 @@ function App() {
               </div>
               <div className="powerRow">
                 <strong>180 a 240 kW</strong>
-                <span>Corredores estratégicos e alta rotatividade de veículos.</span>
+                <span>Corredores estratÃƒÂ©gicos e alta rotatividade de veÃƒÂ­culos.</span>
               </div>
             </div>
           </div>
@@ -499,29 +499,29 @@ function App() {
         <section className="faq" id="duvidas">
           <div className="container">
             <div className="sectionHeader center">
-              <span className="eyebrow light">Dúvidas frequentes</span>
+              <span className="eyebrow light">DÃƒÂºvidas frequentes</span>
               <h2>Pontos importantes antes de investir.</h2>
             </div>
 
             <div className="faqGrid">
               <Faq
                 question="Qual carregador devo escolher?"
-                answer="Depende do tipo de usuário, tempo médio de permanência, demanda elétrica disponível e objetivo financeiro. Residências e condomínios normalmente utilizam AC. Rodovias e postos tendem a exigir DC."
+                answer="Depende do tipo de usuÃƒÂ¡rio, tempo mÃƒÂ©dio de permanÃƒÂªncia, demanda elÃƒÂ©trica disponÃƒÂ­vel e objetivo financeiro. ResidÃƒÂªncias e condomÃƒÂ­nios normalmente utilizam AC. Rodovias e postos tendem a exigir DC."
               />
 
               <Faq
-                question="A calculadora substitui o estudo técnico?"
-                answer="Não. Ela entrega uma visão preliminar de viabilidade. O estudo técnico completo considera instalação elétrica, custos reais de obra, tarifa, demanda contratada, equipamento e operação."
+                question="A calculadora substitui o estudo tÃƒÂ©cnico?"
+                answer="NÃƒÂ£o. Ela entrega uma visÃƒÂ£o preliminar de viabilidade. O estudo tÃƒÂ©cnico completo considera instalaÃƒÂ§ÃƒÂ£o elÃƒÂ©trica, custos reais de obra, tarifa, demanda contratada, equipamento e operaÃƒÂ§ÃƒÂ£o."
               />
 
               <Faq
                 question="Preciso aumentar a demanda de energia?"
-                answer="Pode ser necessário. A Renovera avalia a carga existente, potência do carregador, simultaneidade, tensão de alimentação e exigências da concessionária."
+                answer="Pode ser necessÃƒÂ¡rio. A Renovera avalia a carga existente, potÃƒÂªncia do carregador, simultaneidade, tensÃƒÂ£o de alimentaÃƒÂ§ÃƒÂ£o e exigÃƒÂªncias da concessionÃƒÂ¡ria."
               />
 
               <Faq
                 question="O eletroposto pode ser integrado com energia solar?"
-                answer="Sim. A geração solar pode reduzir custo energético e melhorar a margem do projeto, mas deve ser analisada junto com o perfil de consumo e regras de conexão."
+                answer="Sim. A geraÃƒÂ§ÃƒÂ£o solar pode reduzir custo energÃƒÂ©tico e melhorar a margem do projeto, mas deve ser analisada junto com o perfil de consumo e regras de conexÃƒÂ£o."
               />
             </div>
           </div>
@@ -529,15 +529,15 @@ function App() {
 
         <section className="finalCta">
           <div className="container finalCtaBox">
-            <h2>Quer transformar a simulação em um estudo real?</h2>
+            <h2>Quer transformar a simulaÃƒÂ§ÃƒÂ£o em um estudo real?</h2>
             <p>
               A Renovera pode avaliar seu local, estimar o investimento,
-              dimensionar a infraestrutura e indicar a melhor estratégia para o
+              dimensionar a infraestrutura e indicar a melhor estratÃƒÂ©gia para o
               seu eletroposto.
             </p>
             <div className="finalActions">
               <a className="primaryButton" href={calculatorWhatsappLink} target="_blank" rel="noreferrer">
-                Transformar simulação em estudo real
+                Transformar simulaÃƒÂ§ÃƒÂ£o em estudo real
               </a>
               <a className="secondaryButton finalSecondaryButton" href={universalWhatsappLink} target="_blank" rel="noreferrer">
                 Falar com especialista
@@ -552,42 +552,44 @@ function App() {
           <div>
             <img src={logoSrc} alt="Renovera" />
             <p>
-              Engenharia, energia e mobilidade elétrica para estruturar a nova
+              Engenharia, energia e mobilidade elÃƒÂ©trica para estruturar a nova
               infraestrutura de recarga no Brasil.
             </p>
           </div>
 
-          <div className="footerGridThree">
-            <div className="footerPanel">
-              <h4><span className="footerIcon">01</span>ENDEREÇO</h4>
-              <p>Rua Visconde do Rio Branco, n.106, Centro, São João da Boa Vista - SP, CEP: 13870-180</p>
-            </div>
-            <div className="footerPanel">
-              <h4><span className="footerIcon">02</span>TELEFONES</h4>
-              <a href="https://wa.me/5519996514827" target="_blank" rel="noreferrer">+55 (19) 99651-4827</a>
-              <a href="tel:+551931950160">+55 (19) 3195-0160</a>
-            </div>
-            <div className="footerPanel">
-              <h4><span className="footerIcon">03</span>E-MAIL</h4>
-              <a href="mailto:contato@renovera.com.br">contato@renovera.com.br</a>
-              <p>Viabilidade, infraestrutura, projeto elétrico e implantação de eletropostos.</p>
-            </div>
+          <div>
+            <h4>Menu</h4>
+            <a href="#roi">SimulaÃ§Ã£o</a>
+            <a href="#solucao">SoluÃ§Ã£o</a>
+            <a href="#aplicacoes">AplicaÃ§Ãµes</a>
+            <a href="#potencias">PotÃªncias</a>
           </div>
-        </div>
 
-        <div className="container ecosystemLinks">
-          <a href="https://renovera1.github.io/renovera-consultoria-regulatoria/" target="_blank" rel="noreferrer">Consultoria Regulatória</a>
-          <a href="https://renovera1.github.io/renovera-projetos-eletricos/" target="_blank" rel="noreferrer">Projetos Elétricos</a>
-          <a href="https://renovera1.github.io/renovera-energia-solar/" target="_blank" rel="noreferrer">Energia Solar</a>
-          <a href="https://renovera1.github.io/renovera-eletroposto/" target="_blank" rel="noreferrer">Eletropostos</a>
-        </div>
+          <div>
+            <h4>Contato</h4>
+            <a href={whatsappLink} target="_blank">
+              WhatsApp comercial
+            </a>
+            <a href="mailto:contato@renovera.com.br">contato@renovera.com.br</a>
+          </div>
 
+          <div>
+            <h4>Compliance</h4>
+            <p>
+              Canal Ã©tico e confidencial para denÃºncias e comunicaÃ§Ãµes internas.
+            </p>
+            <a href="mailto:compliance@renovera.com.br">
+              compliance@renovera.com.br
+            </a>
+          </div>
+
+        </div>
         <div className="container copyright">
-          © 2026 Renovera. Todos os direitos reservados.
+          Ã‚Â© 2026 Renovera. Todos os direitos reservados.
         </div>
       </footer>
 
-      <a className="whatsappFloat" href={universalWhatsappLink} target="_blank" rel="noreferrer" aria-label="Receber análise pelo WhatsApp">
+      <a className="whatsappFloat" href={whatsappLink} target="_blank" rel="noreferrer" aria-label="Falar com a Renovera no WhatsApp">
         <WhatsAppIcon />
       </a>
       <LiveEditor namespace="renovera-eletroposto" />
@@ -657,7 +659,7 @@ function Faq({ question, answer }: { question: string; answer: string }) {
     <div className={`faqItem ${open ? "active" : ""}`}>
       <button onClick={() => setOpen(!open)}>
         <span>{question}</span>
-        <strong>{open ? "−" : "+"}</strong>
+        <strong>{open ? "Ã¢Ë†â€™" : "+"}</strong>
       </button>
 
       {open && <p>{answer}</p>}
